@@ -1,0 +1,13 @@
+[Unit]
+Description=Your Data Retrieval Service
+After=network.target
+
+[Service]
+User=your_username
+WorkingDirectory=/path/to/your/script
+ExecStart=/path/to/your/python /path/to/your/script/your_script.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,13 @@
+[Unit]
+Description=Your Project Uvicorn Service
+After=network.target
+
+[Service]
+User=your_user  # Replace with your system user
+WorkingDirectory=/path/to/your/project
+ExecStart=/path/to/your/virtualenv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
